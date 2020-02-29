@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Banner from "./components/Banner";
+import Candidates from "./components/Candidates";
+import ElectionHome from "./components/ElectionHome";
+import Issues from "./components/Issues";
+import Login from "./components/Login";
+import Mainpage from "./components/Mainpage";
+import Sidebar from "./components/Sidebar";
+import Signup from "./components/Signup";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Banner pageData={pageData}/>
+        <Candidates pageData={pageData}/>
+        <ElectionHome pageData={pageData}/>
+        <Issues pageData={pageData}/>
+        <Login pageData={pageData}/>
+        <Mainpage pageData={pageData}/>
+        <Sidebar pageData={pageData}/>
+        <Signup pageData={pageData}/>
+      </div>
+    )
+  }
 }
+
+
 
 export default App;
