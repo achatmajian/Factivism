@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 
-export default class Issues extends Component {
-    render() {
-        let pageData = this.props.pageData;
-        return (
+class Issues extends Component {
 
-        )
+    componentDidMount() {
+        fetch("https://thewisevote.com/api/issues2/welfare")
+        .then(results => {
+            return results.json();
+        }).then(data => {
+            let question = data.response.question;
+            console.log(data);
+            console.log(question);
+        });
+    }
+    render() {
+        return ("hello")
     }
 }
 
