@@ -1,23 +1,39 @@
-// Require/import the HTTP module
-var http = require("http");
+var express = require("express");
+var logger = require("morgan");
+var mongoose = require("mongoose");
 
-// Define a port to listen for incoming requests
-var PORT = 8080;
+var PORT = 3000;
 
-// Create a generic function to handle requests and responses
-function handleRequest(request, response) {
+// Requires the User model for accessing the Users collection
+var User = require("./userModel.js");
 
-    // Send the below string to the client when the user visits the PORT URL
-    response.end("It Works!!  Path Hit: " + request.url);
-}
+// Initialize Express
+var app = express();
 
-// Use the Node HTTP package to create our server.
-// Pass the handleRequest function to empower it with functionality.
-var server = http.createServer(handleRequest);
+// Middleware
+// Morgan logger logs requests
+app.use(logger("dev"));
 
-// Start our server so that it can begin listening to client requests
-server.listen(PORT, function() {
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-    // Log(server-side) when our server has started
-    console.log("Server listening on: http://localhost:" + PORT);
+app.use(express.static("public"));
+
+// Connect to mongo
+mongoose.connect("mongodb://localhost/membersdb", { useNewUrlParser: true });
+
+// Route for adding new member
+app.post("/submit", function(req, res) {
+    // Create new user using req.body
+    User.create(req.body)
+    .then(function(dbUser) {
+        res.json(dbUser);
+    })
+    .catch(function(err) {
+        res.json(err);
+    });
+});
+
+app.listen(PORT, function() {
+    console.log("App running on port " + PORT);
 });
