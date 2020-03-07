@@ -4,7 +4,7 @@ import "./Name.css";
 const Name = () => (
     <div className="form-group password-input">
         <label for="exampleInputName">Name</label>
-        <input type="password" id="exampleInputName" placeholder="Name"></input>
+        <input type="text" id="exampleInputName" placeholder="Name"></input>
     </div>
   );
 
