@@ -46,6 +46,13 @@ var UserSchema = new Schema({
         type: String,
         unique: true,
         match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+    password: {
+        type: String,
+        trim: true,
+        minlength: 6,
+        maxlength: 15,
+        required: "password is Required"
     }
 });
 
