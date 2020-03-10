@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import Email from './Form/Email';
+import Password from './Form/Password';
 
-export default class Signup extends Component {
+class Signup extends Component {
     render() {
         let pageData = this.props.pageData;
         return (
-
+            <Email/>
         )
     }
 }

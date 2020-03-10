@@ -5,7 +5,7 @@ import State from './Form/State';
 import Zip from './Form/Zip';
 import React, { Component } from "react";
 
-export default class Profile extends Component {
+class Profile extends Component {
     render() {
         let pageData = this.props.pageData;
         return (

@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
-export default class Login extends Component {
+class Login extends Component {
     render() {
         let pageData = this.props.pageData;
-        return (
-
-        )
+        return ("log in")
     }
 }
 

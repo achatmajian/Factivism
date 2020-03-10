@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
-export default class Banner extends Component {
+class Banner extends Component {
     render() {
         let pageData = this.props.pageData;
-        return (
-
-        )
+        return ("login")
     }
 }
 

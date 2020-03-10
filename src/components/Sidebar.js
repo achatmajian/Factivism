@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
-export default class Sidebar extends Component {
+class Sidebar extends Component {
     render() {
         let pageData = this.props.pageData;
-        return (
-
-        )
+        return ("sidebar")
     }
 }
 

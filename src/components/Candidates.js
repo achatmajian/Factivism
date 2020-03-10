@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
-export default class Candidates extends Component {
+class Candidates extends Component {
     render() {
         let pageData = this.props.pageData;
-        return (
-
-        )
+        return ("candidate")
     }
 }
 
