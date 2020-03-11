@@ -39,7 +39,45 @@ var UserSchema = new Schema({
         maxlength: 5,
         required: "zipcode is Required"
     },
-    politicalsurvey: {
+    abortion_stance: {
+        type: String,
+        trim: true
+    },
+    border_wall_stance: {
+        type: String,
+        trim: true
+    },
+    charter_schools_stance: {
+        type: String,
+        trim: true
+    },
+    climate_change_stance: {
+        type: String,
+        trim: true
+    },
+    gun_control_stance: {
+        type: String,
+        trim: true
+    },
+    obamacare_stance: {
+        type: String,
+        trim: true
+    },
+    student_loans_stance: {
+        type: String,
+        trim: true
+    },
+    marijuana_stance: {
+        type: String,
+        trim: true
+    },
+    israel_stance: {
+        type: String,
+        trim: true
+    }, 
+    military_spending_stance: {
+        type: String,
+        trim: true
     },
     // username but it's really the email field
     username: {

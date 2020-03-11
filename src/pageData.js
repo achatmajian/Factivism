@@ -170,6 +170,55 @@ let pageData = {
         }
         
         
+    ],
+    "candidates": [
+        {
+            "name": "Bernie Sanders",
+            "url":"https://www.sanders.senate.gov",
+            "img_url": "https://theunitedstates.io/images/congress/original/S000033.jpg",
+            "political_positions": [
+                {
+                    "position_name": "Abortion",
+                    "position_stance": "Pro-choice"
+                },
+                {
+                    "position_name": "Border Wall",
+                    "position_stance": "No, this would be too costly and ineffective"
+                },
+                {
+                    "position_name": "Charter Schools",
+                    "position_stance": "No, and education should not be privatized."
+                },
+                {
+                    "position_name": "Climate Change",
+                    "position_stance": "Yes, and provide more incentives for alternate energy production"
+                },
+                {
+                    "position_name": "Gun Control",
+                    "position_stance": "Yes, require strict background checks, psychological testing, and training"
+                },
+                {
+                    "position_name": "Obamacare",
+                    "position_stance": "Yes, but a mandatory single payer system would be even better"
+                },
+                {
+                    "position_name": "Student Loans",
+                    "position_stance": "Yes, and increase government funding so every student receives a free college education"
+                },
+                {
+                    "position_name": "Marijuana",
+                    "position_stance": "Yes, and immediately release anyone serving time solely for drug offenses"
+                },
+                {
+                    "position_name": "Israel",
+                    "position_stance": "Yes, and we should give equal support to Israel and Palestine"
+                },
+                {
+                    "position_name": "Military Spending",
+                    "position_stance": "No"
+                }
+            ]
+        }
     ]
 }
 
