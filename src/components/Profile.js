@@ -6,7 +6,18 @@ import Zip from './Form/Zip';
 import React, { Component } from "react";
 
 class Profile extends Component {
+
     render() {
+        componentDidMount() {
+            fetch("https://www.googleapis.com/civicinfo/v2/voterinfo")
+            .then(results => {
+                return results.json();
+            }).then(data => {
+                let question = data.response.question;
+                console.log(data);
+                console.log(question);
+            });
+        }
         let pageData = this.props.pageData;
         return (
             <div id="profile-form">
@@ -16,6 +27,7 @@ class Profile extends Component {
                     <City />
                     <State />
                     <Zip />
+                    <SubmitButton onClick={/*call API with Zip*/}/>
                 </form>    
             </div>
         )
