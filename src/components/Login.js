@@ -9,8 +9,8 @@ class Login extends Component {
         <div className="Form-Container">
             <h3>Log In</h3>
             <Name></Name>
-            <Address></Address>
-            <LoginButton></LoginButton>
+            <Password></Password>
+            <LogInButton></LogInButton>
         </div>
         </Wrapper>
     }

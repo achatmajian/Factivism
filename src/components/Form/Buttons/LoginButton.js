@@ -1,10 +1,10 @@
 import React from "react";
-import "./LoginButton.css";
+import "./LogInButton.css";
 
-const LoginButton = () => (
+const LogInButton = () => (
     <div className="form-group login-button">
         <button type="submit" class="btn btn-primary">Log In</button>
     </div>
   );
 
-  export default LoginButton;
+  export default LogInButton;
