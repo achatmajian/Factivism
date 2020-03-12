@@ -6,47 +6,48 @@ export default class Issues extends Component {
     
     render() {
         let pageData = this.props.pageData;
-        return (
-            <section id="issuesarray">
-                <div className="row">
-                    <div className="twelve columns collapsed">
-                        <h1>Testing</h1>
-                        <div id="questions-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-                            {
-                                pageData.issuesarray.map((item, i) => {
-                                    var yesData = [];
-                                    var pullYesData = (v) => {
-                                        yesData.push(v);
-                                    }
-
-                                    var noData = [];
-                                    var pullNoData = (x) => {
-                                        noData.push(x);
-                                    }
-                                    item.side_yes.map(yesItem => 
-                                        pullYesData(yesItem));
-                                        console.log(yesData);
-                                    item.side_no.map(noItem => 
-                                        pullNoData(noItem));
-                                        console.log(noData);
-                                    
-                                    return (
-                                        <ul key={i}>
-                                            <img src={item.icon} className="issues-icon" alt="icon"/>
-                                            <h1>{item.name}</h1>
-                                            <h3>{item.question}</h3>
-                                            <h5>{yesData}</h5>
-                                            <h5>{noData}</h5>
-                                        </ul>
-
-                                    )
-                                })
-                            }
+        let issuesarray = pageData.issuesarray;
+        for (var i = 0; i < issuesarray.length; i++) {
+            console.log(issuesarray[i]);
+            return (
+            <div className="row">
+                <div className="twelve columns collapsed">
+                    {issuesarray[i].name}
+                    <img src={issuesarray[i].icon} className="img-icon" alt="icon"/>
+                    <div id="questions-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                        {issuesarray[i].question}
+                    </div>
+                    <div id="answers-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                        <div>
+                            <input type="radio" name="yes-choices"></input>
+                            <label for="yes-choices">{issuesarray[i].side_yes[0]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="yes-choices"></input>
+                            <label for="yes-choices">{issuesarray[i].side_yes[1]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="yes-choices"></input>
+                            <label for="yes-choices">{issuesarray[i].side_yes[2]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="no-choices"></input>
+                            <label for="no-choices">{issuesarray[i].side_no[0]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="no-choices"></input>
+                            <label for="no-choices">{issuesarray[i].side_no[1]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="no-choices"></input>
+                            <label for="no-choices">{issuesarray[i].side_no[2]}</label>
                         </div>
                     </div>
-                        
                 </div>
-            </section>
-        )
+            </div>
+            )
+        }
     }
 }
+
+// counting variable for iterating through the quiz
