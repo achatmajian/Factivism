@@ -7,14 +7,14 @@ let pageData = {
             "question":"What is your stance on abortion?",
             "side_yes": [
                 "Pro-life",
-                "Pro-life, but allow in cases of rape, incest, or danger to the mother or child",
-                "Pro-life, and I also oppose abortion for victims of rape and incest"
+                "Pro-life, but allow in cases of rape, incest, or danger to the mother or child.",
+                "Pro-life, and I also oppose abortion for victims of rape and incest."
             ],
             "side_no":[
                 "Pro-choice",
-                "Pro-choice, and providing birth control, sex education, and more social services will help reduce the number of abortions",
+                "Pro-choice, and providing birth control, sex education, and more social services will help reduce the number of abortions.",
                 "Pro-choice.  I don't agree with it, but the government has no right to ban it.",
-                "Pro-choice, but ban after the first three months"
+                "Pro-choice, but ban after the first three months."
             ]
         },
         {
