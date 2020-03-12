@@ -1,24 +1,26 @@
 import React, { Component } from "react";
-import Email from './Form/Email';
-import Password from './Form/Password';
-import SignUpButton from "./Form/Buttons/SignUpButton";
+import Email from './Form/Inputs/Email';
+import Password from './Form/Inputs/Password';
+import SubmitButton from "./Form/Buttons/SubmitButton";
+import Wrapper from "./Wrapper/Wrapper"
+import Title from "./Title/Title"
 
-class Signup extends Component {
+class Signup1 extends Component {
     render() {
         let pageData = this.props.pageData;
         <Wrapper>
         <Title></Title>
         <div className="Form-Container">
             <h3>Sign Up</h3>
-            <Name></Name>
-            <Address></Address>
-            <City></City>
-            <State></State>
-            <Zip></Zip>
-            <SignUpButton></SignUpButton>
+            <Email></Email>
+            <Password></Password>
+            <SubmitButton></SubmitButton>
         </div>
         </Wrapper>
+        return (
+            <Email/>
+        )
     }
 }
 
-export default Signup2;
+export default Signup1;
