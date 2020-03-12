@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 
-var yesData = [];
-var pullYesData = (v) => {
-    yesData.push(v);
-}
 
-var noData = [];
-var pullNoData = (x) => {
-    noData.push(x);
-}
 
 export default class Issues extends Component {
     
@@ -22,6 +14,15 @@ export default class Issues extends Component {
                         <div id="questions-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
                             {
                                 pageData.issuesarray.map((item, i) => {
+                                    var yesData = [];
+                                    var pullYesData = (v) => {
+                                        yesData.push(v);
+                                    }
+
+                                    var noData = [];
+                                    var pullNoData = (x) => {
+                                        noData.push(x);
+                                    }
                                     item.side_yes.map(yesItem => 
                                         pullYesData(yesItem));
                                         console.log(yesData);
