@@ -1,9 +1,9 @@
 import React from "react";
 import "./SubmitButton.css";
 
-const SubmitButton = () => (
+const SubmitButton = (props) => (
     <div className="form-group submit-button">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary" onClick={props.onSubmit}>Submit</button>
     </div>
   );
 
