@@ -4,12 +4,18 @@ import City from './Form/City';
 import State from './Form/State';
 import Zip from './Form/Zip';
 import React, { Component } from "react";
+import "./Profile.css";
 
-class Profile extends Component {
+// Profile page that displays user information and links to the other material
+
+export default class Profile extends Component {
     render() {
         let pageData = this.props.pageData;
         return (
-            <div id="profile-form">
+            <section id="profile">
+                <h2>PROFILE SECTION</h2>
+                <h3>{pageData.testing}</h3>
+                 <div id="profile-form">
                 <form>
                     <Name />
                     <Address />
@@ -18,8 +24,8 @@ class Profile extends Component {
                     <Zip />
                 </form>    
             </div>
+            </section>
+           
         )
     }
 }
-
-export default Profile;

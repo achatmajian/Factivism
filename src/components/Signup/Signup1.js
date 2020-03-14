@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import Email from './Form/Inputs/Email';
-import Password from './Form/Inputs/Password';
-import SubmitButton from "./Form/Buttons/SubmitButton";
-import Wrapper from "./Wrapper/Wrapper"
-import Title from "./Title/Title"
+import Email from '../Form/Inputs/Email';
+import Password from '../Form/Inputs/Password';
+import SubmitButton from "../Form/Buttons/SubmitButton";
+import Wrapper from "../Wrapper/Wrapper"
+import Title from "../Title/Title"
+import "./Signup.css";
 
-class Signup1 extends Component {
+// First page of signing up - basic username, email, password combo
+
+export default class Signup1 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -46,5 +49,3 @@ class Signup1 extends Component {
         )
     }
 }
-
-export default Signup1;

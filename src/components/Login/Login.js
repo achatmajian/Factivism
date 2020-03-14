@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import LoginButton from "./Form/Buttons/LoginButton";
+import LoginButton from "../Form/Buttons/LoginButton";
+import "./Login.css";
 
-class Login extends Component {
+// Page for logging in with their username and password
+
+export default class Login extends Component {
     render() {
         let pageData = this.props.pageData;
         <Wrapper>
@@ -15,5 +18,3 @@ class Login extends Component {
         </Wrapper>
     }
 }
-
-export default Login;
