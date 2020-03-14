@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import LoginButton from "../Form/Buttons/LoginButton";
+import "./Login.css";
 import Email from './Form/Inputs/Email';
 import Password from './Form/Inputs/Password';
 import LoginButton from "./Form/Buttons/LoginButton";
 import Wrapper from "./Wrapper/Wrapper"
 import Title from "./Title/Title"
 
-class Login extends Component {
+// Page for logging in with their username and password
+
+export default class Login extends Component {
     render() {
         return(
         <Wrapper>
@@ -20,5 +24,3 @@ class Login extends Component {
         )
     }
 }
-
-export default Login;

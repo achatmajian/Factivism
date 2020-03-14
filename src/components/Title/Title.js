@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import "./Title.css";
 
+// Title/Banner that remains constant as each component renders.  Factivism Logo and whatnot.
+
 const Title = props => (
     <Fragment>
       <div className="title"><h1>Factivism</h1></div>

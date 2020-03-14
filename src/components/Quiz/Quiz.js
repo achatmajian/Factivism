@@ -1,34 +1,54 @@
-import React, { Fragment } from "react";
+import React, { Component } from "react";
 import "./Quiz.css";
 
-const Quiz = props => (
-    <Fragment>
-      <div className="question"><h3>Question Goes Here</h3></div>
-      <div className="quiz-choices">
-        <ul>
-          <div>
-            <input type="radio" id="choice1" name="quiz-choices"></input>
-            <label for="choice1">Strongly Agree</label>
-          </div>
-          <div>
-            <input type="radio" id="choice2" name="quiz-choices"></input>
-            <label for="choice2">Agree</label>
-          </div>
-          <div>
-            <input type="radio" id="choice3" name="quiz-choices"></input>
-            <label for="choice3">Indifferent</label>
-          </div>
-          <div>
-            <input type="radio" id="choice4" name="quiz-choices"></input>
-            <label for="choice4">Disagree</label>
-          </div>
-          <div>
-            <input type="radio" id="choice5" name="quiz-choices"></input>
-            <label for="choice5">Strongly Disagree</label>
-          </div>
-        </ul>
-        </div>
-    </Fragment>
-);
+// Page that renders the quiz for determining political preferences and connecting with an appropriate electoral candidate
 
-export default Quiz;
+export default class Quiz extends Component {
+    
+    render() {
+        let pageData = this.props.pageData;
+        let issuesarray = pageData.issuesarray;
+        for (var i = 0; i < issuesarray.length; i++) {
+            console.log(issuesarray[i]);
+            return (
+            <div className="row">
+                <div className="twelve columns collapsed">
+                    {issuesarray[i].name}
+                    <img src={issuesarray[i].icon} className="img-icon" alt="icon"/>
+                    <div id="questions-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                        {issuesarray[i].question}
+                    </div>
+                    <div id="answers-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                        <div>
+                            <input type="radio" name="yes-choices"></input>
+                            <label for="yes-choices">{issuesarray[i].side_yes[0]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="yes-choices"></input>
+                            <label for="yes-choices">{issuesarray[i].side_yes[1]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="yes-choices"></input>
+                            <label for="yes-choices">{issuesarray[i].side_yes[2]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="no-choices"></input>
+                            <label for="no-choices">{issuesarray[i].side_no[0]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="no-choices"></input>
+                            <label for="no-choices">{issuesarray[i].side_no[1]}</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="no-choices"></input>
+                            <label for="no-choices">{issuesarray[i].side_no[2]}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            )
+        }
+    }
+}
+
+// counting variable for iterating through the quiz

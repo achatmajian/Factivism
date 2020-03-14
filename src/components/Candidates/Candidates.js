@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import "./Candidates.css";
+
+// Page to render information about each candidate
 
 export default class Candidates extends Component {
     render() {
