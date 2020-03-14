@@ -35,7 +35,7 @@ class Signup1 extends Component {
         //let pageData = this.props.pageData;
         return (
             <Wrapper>
-            <Title></Title>
+                <Title />
                 <div className="Form-Container">
                     <h3>Sign Up</h3>
                     <Email value={this.state.email} onChange={this.handleChange} />

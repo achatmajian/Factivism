@@ -1,10 +1,10 @@
 import React from "react";
 import "./City.css";
 
-const City = () => (
+const City = (props) => (
     <div className="form-group city-input">
-        <label for="exampleInputCity">City</label>
-        <input type="text" id="exampleInputCity" placeholder="City"></input>
+        <label>City</label>
+        <input type="text" id="exampleInputCity" placeholder="City" onChange={props.onChange} />
     </div>
   );
 
