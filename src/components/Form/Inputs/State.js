@@ -1,10 +1,10 @@
 import React from "react";
 import "./State.css";
 
-const State = () => (
+const State = (props) => (
     <div className="form-group state-input">
-        <label for="exampleInputState">State</label>
-        <input type="text" id="exampleInputState" placeholder="State"></input>
+        <label>State</label>
+        <input type="text" id="exampleInputState" placeholder="State" onChange={props.onChange}/>
     </div>
   );
 
