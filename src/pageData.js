@@ -29,9 +29,7 @@ let pageData = {
             "side_no":[
                 "No",
                 "No, this would be too costly and ineffective",
-                "No, but increase our military presence along the border",
-                "No, and we should adopt an open border policy",
-                "No, keep the current wall but do not build more of it"
+                "No, and we should adopt an open border policy"
             ]
         },
         {
@@ -41,7 +39,6 @@ let pageData = {
             "question":"Do you support charter schools?",
             "side_yes":[
                 "Yes",
-                "Yes, but not at the expense of funding public schools",
                 "Yes, but only if they are non-profit",
                 "Yes, and our entire education system should be privatized"
             ],
@@ -58,13 +55,13 @@ let pageData = {
             "question":"Should the government increase environmental regulations to prevent climate change?",
             "side_yes": [
                 "Yes",
-                "Yes, and provide more incentives for alternate energy production."
+                "Yes, and provide more incentives for alternate energy production.",
+                "Yes, and work with other countries to form a climate change coalition"
             ], 
             "side_no": [
                 "No",
                 "No, provide more incentives for alternative energy production instead",
-                "No, and global warming is a natural occurrence",
-                "No, tax carbon emissions instead"
+                "No, and global warming is a natural occurrence"
             ]
         },
         {
@@ -75,15 +72,12 @@ let pageData = {
             "side_yes": [
                 "Yes",
                 "Yes, require strict background checks, psychological testing, and training",
-                "Yes, and ban all guns from public use.",
-                "Yes, but only by closing the gun show loophole"
+                "Yes, and ban all guns from public use."
             ],
             "side_no": [
                 "No",
                 "No, only for criminals and the mentally ill.",
-                "No, only for assault weapons",
-                "No, but increase penalties for gun-related crimes",
-                "No, and the government should pass a national 'stand-your-ground' law."
+                "No, only for assault weapons"
             ]
         },
         {
@@ -93,7 +87,6 @@ let pageData = {
             "question": "Do you support the Patient Protection and Affordable Care Act (Obamacare)?",
             "side_yes": [
                 "Yes",
-                "Yes, I support a majority of the plan but not all aspects",
                 "Yes, but a mandatory single payer system would be even better",
                 "Yes, and allow consumers to choose providers and import pharmaceuticals from other countries"
             ],
@@ -110,7 +103,8 @@ let pageData = {
             "question": "Do you support increasing taxes for the rich in order to reduce interest rates for student loans?",
             "side_yes": [
                 "Yes",
-                "Yes, and increase government funding so every student receives a free college education"
+                "Yes, and increase government funding so every student receives a free college education",
+                "Yes, and encourage economic stimulus from the middle class"
             ],
             "side_no": [
                 "No",
@@ -125,13 +119,13 @@ let pageData = {
             "question": "Do you support the legalization of Marijuana?",
             "side_yes": [
                 "Yes",
-                "Yes, and legalize, tax, and regulate marijuana instead of criminalizing it",
                 "Yes, but only for medical use",
                 "Yes, and immediately release anyone serving time solely for drug offenses"
             ],
             "side_no": [
                 "No",
-                "No, and increase penalties for non-violent drug offenders"
+                "No, and increase penalties for non-violent drug offenders",
+                "No, and invoke stricter penalties for all drug use"
             ]
         },
         {
@@ -141,15 +135,11 @@ let pageData = {
             "question": "Should the United States continue to support Israel?",
             "side_yes": [
                 "Yes",
-                "Yes, but respect Israel's sovereignty and do not dictate how it should interact with its neighbors",
                 "Yes, and we should give equal support to Israel and Palestine",
-                "Yes, and with more aid and support",
-                "Yes, and increase funding in order to move the embassy to Jerusalem"
+                "Yes, and with more aid and support"
             ],
             "side_no": [
                 "No",
-                "No, we should be less involved",
-                "No, we should not give aid to any foreign nations",
                 "No, not the current administration",
                 "No, cut all support and aid"
             ]
@@ -161,10 +151,13 @@ let pageData = {
             "question": "Should the government increase military spending?",
             "side_yes": [
                 "Yes",
-                "Yes, but only after our deficit is drastically reduced"
+                "Yes, but only after our deficit is drastically reduced",
+                "Yes, and increase military recruitment"
             ],
             "side_no": [
-                "No"
+                "No",
+                "No, the United States should worry about domestic issues first",
+                "No, and it should be decreased to allocate funds for other programs"
             ]
         }
         
