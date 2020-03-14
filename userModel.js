@@ -5,22 +5,26 @@ var Schema = mongoose.Schema;
 
 // create new UserSchema object
 var UserSchema = new Schema({
-    firstname: {
+    email: {
+        type: String,
+        unique: true,
+        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+    password: {
+        type: String,
+        trim: true
+    },
+    name: {
         type: String,
         trim: true,
         required: "firstname is Required"
     },
-    lastname: {
-        type: String,
-        trim: true,
-        required: "lastname is Required"
-    },
-    streetname: {
+    address: {
         type: String,
         trim: true,
         required: "streetname is Required"
     },
-    cityname: {
+    city: {
         type: String,
         trim: true,
         required: "cityname is Required"
@@ -32,7 +36,7 @@ var UserSchema = new Schema({
         minlength: 2,
         required: "state is Required"
     },
-    zipcode: {
+    zip: {
         type: String,
         trim: true,
         minlength: 5,
@@ -76,16 +80,6 @@ var UserSchema = new Schema({
         trim: true
     }, 
     military_spending_stance: {
-        type: String,
-        trim: true
-    },
-    // username but it's really the email field
-    username: {
-        type: String,
-        unique: true,
-        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-    },
-    password: {
         type: String,
         trim: true
     }

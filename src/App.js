@@ -7,7 +7,6 @@ import Login from "./components/Login/Login";
 import Mainpage from "./components/Mainpage/Mainpage";
 import Signup1 from "./components/Signup/Signup1";
 import Signup2 from "./components/Signup/Signup2";
-import Title from "./components/Title/Title";
 import pageData from "./pageData";
 
 class App extends Component {
