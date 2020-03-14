@@ -7,8 +7,8 @@ import Issues from "./components/Issues";
 import Login from "./components/Login";
 import Mainpage from "./components/Mainpage";
 // import Sidebar from "./components/Sidebar";
-import Signup1 from "./components/Signup1";
-//import pageData from "./pageData";
+// import Signup1 from "./components/Signup1";
+import pageData from "./pageData";
 
 class App extends Component {
   render() {
@@ -17,6 +17,7 @@ class App extends Component {
        {/*  <Issues pageData={pageData}/> }
         {/* <Banner pageData={pageData}/>
         <Candidates pageData={pageData}/>
+        {/* /* <Banner pageData={pageData}/>        
         <ElectionHome pageData={pageData}/>
         <Issues pageData={pageData}/>
         <Login pageData={pageData}/>
