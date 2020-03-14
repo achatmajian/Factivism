@@ -21,42 +21,50 @@ const createUser = (req, res) => {
     //if the body has an email field which is not empty then store it, it means that there's no ID created yet
     if (user.email) {
         user
-        .save()
-        .then(() => {
-            return res.status(201).json({
-                success: true,
-                id: user._id,
+        .insertOne(
+            {
+                //creating the new user with the data from step 1
                 email: user.email,
                 password: user.email,
+            }
+        )
+        .then(() => {
+            return res.status(201).json(
+            {
+                id: user._id,
+                message: "Step 1 succeeded. Check DB for entry"
             })
         })
         .catch(error => {
             return res.status(400).json({
                 error,
-                message: 'User not created!',
+                message: 'Step 1 not successful!',
             })
         })
-
     }
     //Whereas, if the user has already gone through step 1 of registratin
     //then we need to lookup the id created and update the remaining fields
     else {
         user
-        .save()
-        .then(() => {
-            return res.status(201).json({
-                success: true,
+        .update(
+            {_id: user._id}, //query to find
+            {
+                //data to update
                 name: user.name,
                 address: user.address,
                 city: user.city,
                 state: user.state,
                 zip: user.zip
             })
+        .then(() => {
+            return res.status(201).json({
+                message: "Step 2 succeeded. Check DB for entry"
+            })
         })
         .catch(error => {
             return res.status(400).json({
                 error,
-                message: 'Movie not created!',
+                message: 'User not created!',
             })
         })
 
