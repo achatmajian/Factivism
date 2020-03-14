@@ -1,10 +1,10 @@
 import React from "react";
 import "./Name.css";
 
-const Name = () => (
+const Name = (props) => (
     <div className="form-group password-input">
-        <label for="exampleInputName">Name</label>
-        <input type="text" id="exampleInputName" placeholder="Name"></input>
+        <label>Name</label>
+        <input type="text" id="exampleInputName" placeholder="Name" onChange={props.onChange} />
     </div>
   );
 
