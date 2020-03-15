@@ -8,7 +8,10 @@ class Mainpage extends Component {
         let pageData = this.props.pageData;
         return (
             <section id="Mainpage">
-                <h2>Mainpage Information Goes Here</h2>
+                <h2>Welcome to Factivism</h2>
+                <p>Factivism is an application dedicating to helping people become more informed and civically active! Join today to get information on issues, candidates, and more. Get politically involved with Factivism.</p>
+                <button type="button" className="button">Log In</button> {/* This button takes the user to the login "page" */}
+                <button type="button" className="button">Sign Up</button> {/* This button takes the user to the sign up 1 "page" */}
                 <h3>{pageData.testing}</h3>
             </section>
         )
