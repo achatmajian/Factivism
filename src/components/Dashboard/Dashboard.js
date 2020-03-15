@@ -18,6 +18,11 @@ class Dashboard extends Component {
                     <h2>Unsure who to vote for? Take this quiz to see which candidate your political views align with the most.</h2>
                     <button type="button" className="button">Take Quiz</button> 
                 </div>
+                <div className="issues-container">
+                    {/* User will click the button in this container to take them to the quiz. */}
+                    <h2>Which issues are most important to you? Click here to get the facts on the most prominent issues in American politics today.</h2>
+                    <button type="button" className="button">See Issues</button> 
+                </div>
                 
             </section>
         )
