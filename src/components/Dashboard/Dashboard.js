@@ -19,16 +19,20 @@ class Dashboard extends Component {
                     <button type="button" className="button">Take Quiz</button> 
                 </div>
                 <div className="issues-container">
-                    {/* User will click the button in this container to take them to the quiz. */}
+                    {/* User will click the button in this container to take them to the issues page. */}
                     <h2>Which issues are most important to you? Click here to get the facts on the most prominent issues in American politics today.</h2>
                     <button type="button" className="button">Explore Issues</button> 
                 </div>
                 <div className="candidate-container">
-                    {/* User will click the button in this container to take them to the quiz. */}
+                    {/* User will click the button in this container to take them to the candidates page. */}
                     <h2>With so many candidates in today's political landscape, it can be difficult to wade through and clearly find out a candidate's political stance. Click here to get a brief summary of each candidate.</h2>
                     <button type="button" className="button">Explore Candidates</button> 
                 </div>
-                
+                <div className="polling-container">
+                    {/* User will click the button in this container to take them to the polling location finder page. */}
+                    <h2>Don't know where to go to cast your vote? We can help you find your polling place based on where you live.</h2>
+                    <button type="button" className="button">Find Polling Place</button> 
+                </div>
             </section>
         )
     }
