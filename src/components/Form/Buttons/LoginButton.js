@@ -1,5 +1,5 @@
 import React from "react";
-import "./LogInButton.css";
+import "./LoginButton.css";
 
 const LogInButton = () => (
     <div className="form-group login-button">
