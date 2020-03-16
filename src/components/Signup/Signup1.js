@@ -29,7 +29,6 @@ export default class Signup1 extends Component {
       handleSubmit = event =>  {
         event.preventDefault();
         alert(`Data was submitted ${this.state.email}`)
-        //console.log("Data was submitted");
         //push to database  
         //go to next page
       }
