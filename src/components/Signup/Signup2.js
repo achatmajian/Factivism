@@ -7,6 +7,7 @@ import State from '../Form/Inputs/State';
 import Zip from '../Form/Inputs/Zip';
 import Wrapper from "../Wrapper/Wrapper"
 import Title from "../Title/Title"
+import axios from "axios";
 import "./Signup.css";
 
 // Page for fleshing out the rest of the user profile, with address and contact info for figuring out polling places and election dates
@@ -37,8 +38,19 @@ export default class Signup2 extends Component {
         event.preventDefault();
         alert(`Data was submitted ${this.state.name}`);
         //console.log("Data was submitted");
-        //push to database  
+        //push to database
+        axios.post('/create-user', {
+          email: this.state.email,
+          password: this.state.password
+        })
+        .then(function(response){
+          console.log(response)
+        })
+        .catch(function (error) {
+          console.log(error);
+        });  
         //go to next page
+        
       }
     
     render() {
