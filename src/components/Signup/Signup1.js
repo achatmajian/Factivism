@@ -29,18 +29,8 @@ export default class Signup1 extends Component {
     
       handleSubmit = event =>  {
         event.preventDefault();
-        alert(`Data was submitted ${this.state.email}`)
-        //push to database 
-        axios.post('/create-user', {
-          email: this.state.email,
-          password: this.state.password
-        })
-        .then(function(response){
-          console.log(response)
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+        //alert(`Data was submitted ${this.state.email}`)
+
         //go to next page
       }
     
