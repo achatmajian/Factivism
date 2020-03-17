@@ -17,6 +17,8 @@ export default class Signup2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
+          email: "",
+          password: "",
           name: "",
           address: "",
           city: "",
@@ -29,6 +31,8 @@ export default class Signup2 extends Component {
         this.setState({ 
             [event.target.name]: event.target.value 
         });
+        console.log("current values email", this.email);
+        console.log("current values password", this.password);
         console.log("current values name", this.name);
         console.log("current values address", this.state.address);
         console.log("current values city", this.state.city);
