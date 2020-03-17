@@ -5,7 +5,13 @@ import SubmitButton from "../Form/Buttons/SubmitButton";
 import Wrapper from "../Wrapper/Wrapper"
 import Title from "../Title/Title"
 import "./Signup.css";
-import axios from "axios";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 
 // First page of signing up - basic username, email, password combo
 
@@ -27,13 +33,6 @@ export default class Signup1 extends Component {
         console.log("current values pass", this.state.password);
       }
     
-      handleSubmit = event =>  {
-        event.preventDefault();
-        //alert(`Data was submitted ${this.state.email}`)
-
-        //go to next page
-      }
-    
     render() {
         //let pageData = this.props.pageData;
         return (
@@ -43,7 +42,9 @@ export default class Signup1 extends Component {
                     <h3>Sign Up</h3>
                     <Email value={this.state.email} onChange={this.handleChange} />
                     <Password value={this.state.password} onChange={this.handleChange} />
-                    <SubmitButton onSubmit={this.handleSubmit}/>
+                    <Switch>
+                      <Router><SubmitButton path="/signup2" values={this.state.email, this.state.password}/></Router>
+                    </Switch>
                 </div>
             </Wrapper>
         )
