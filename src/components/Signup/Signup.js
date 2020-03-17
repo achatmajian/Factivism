@@ -5,6 +5,8 @@ import Address from '../Form/Inputs/Address';
 import City from '../Form/Inputs/City';
 import State from '../Form/Inputs/State';
 import Zip from '../Form/Inputs/Zip';
+import Email from '../Form/Inputs/Email';
+import Password from '../Form/Inputs/Password';
 import Wrapper from "../Wrapper/Wrapper"
 import Title from "../Title/Title"
 import axios from "axios";
@@ -34,14 +36,19 @@ export default class Signup2 extends Component {
         console.log("current values zip", this.state.zip);
       }
     
-      handleSubmit = event =>  {
+      handleSubmit = (props,event) =>  {
         event.preventDefault();
         alert(`Data was submitted ${this.state.name}`);
         //console.log("Data was submitted");
         //push to database
         axios.post('/create-user', {
           email: this.state.email,
-          password: this.state.password
+          password: this.state.password, 
+          name: this.state.name,
+          address: this.state.address,
+          city: this.state.city,
+          state: this.state.state,
+          zip: this.state.zip
         })
         .then(function(response){
           console.log(response)
@@ -59,6 +66,8 @@ export default class Signup2 extends Component {
                 <Title />
                 <div className="Form-Container">
                     <h3>Sign Up</h3>
+                    <Email value={this.state.email} onChange={this.handleChange} />
+                    <Password value={this.state.password} onChange={this.handleChange} />
                     <Name value={this.state.name} onChange={this.handleChange} />
                     <Address value={this.state.address} onChange={this.handleChange} />
                     <City value={this.state.city} onChange={this.handleChange} />
