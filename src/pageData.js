@@ -1,7 +1,7 @@
 let pageData = {
     "issuesarray": [
         {
-            "route": "abortion",
+            "route": "abortion_stance",
             "name":"Abortion",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/1160628722.jpg",
             "question":"What is your stance on abortion?",
@@ -17,7 +17,7 @@ let pageData = {
             ]
         },
         {
-            "route": "border_wall",
+            "route": "border_wall_stance",
             "name":"Border Wall",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/2906282379.jpg",
             "question": "Should the United States build a wall along the southern border with Mexico?",
@@ -33,7 +33,7 @@ let pageData = {
             ]
         },
         {
-            "route":"charter_schools",
+            "route":"charter_schools_stance",
             "name":"Charter Schools",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/3460197214.jpg",
             "question":"Do you support charter schools?",
@@ -49,7 +49,7 @@ let pageData = {
             ]
         },
         {
-            "route":"climate_change",
+            "route":"climate_change_stance",
             "name":"Climate Change",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/1160596428.jpg",
             "question":"Should the government increase environmental regulations to prevent climate change?",
@@ -65,7 +65,7 @@ let pageData = {
             ]
         },
         {
-            "route": "gun_control",
+            "route": "gun_control_stance",
             "name": "Gun Control",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/241281060.jpg",
             "question": "Should there be more restrictions on the current process of purchasing a gun?",
@@ -81,7 +81,7 @@ let pageData = {
             ]
         },
         {
-            "route": "obamacare",
+            "route": "obamacare_stance",
             "name": "Obamacare",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/1160618003.jpg",
             "question": "Do you support the Patient Protection and Affordable Care Act (Obamacare)?",
@@ -97,7 +97,7 @@ let pageData = {
             ]
         },
         {
-            "route": "student_loans",
+            "route": "student_loans_stance",
             "name": "Student Loans",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/721303524.jpg",
             "question": "Do you support increasing taxes for the rich in order to reduce interest rates for student loans?",
@@ -113,7 +113,7 @@ let pageData = {
             ]
         },
         {
-            "route": "marijuana",
+            "route": "marijuana_stance",
             "name": "Marijuana",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/235662864.jpg",
             "question": "Do you support the legalization of Marijuana?",
@@ -129,7 +129,7 @@ let pageData = {
             ]
         },
         {
-            "route": "israel",
+            "route": "israel_stance",
             "name": "Israel",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/235662821.jpg",
             "question": "Should the United States continue to support Israel?",
@@ -145,7 +145,7 @@ let pageData = {
             ]
         },
         {
-            "route": "military_spending",
+            "route": "military_spending_stance",
             "name": "Military Spending",
             "icon": "https://d3ky08o2dntqg3.cloudfront.net/news/images/issues/300/284868183.jpg",
             "question": "Should the government increase military spending?",

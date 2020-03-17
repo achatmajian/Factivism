@@ -2,10 +2,10 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-var PORT = 3000;
+var PORT = 3001;
 
 // Requires the User model for accessing the Users collection
-var User = require("./models/userModel.js");
+var user = require("./models/userModel.js");
 
 // Initialize Express
 var app = express();
@@ -23,16 +23,18 @@ app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/membersdb", { useNewUrlParser: true });
 
 // Route for adding new member
-app.post("/submit", function(req, res) {
+app.post("/create-user", function(req, res) {
     // Create new user using req.body
-    User.create(req.body)
-    .then(function(dbUser) {
-        res.json(dbUser);
-    })
-    .catch(function(err) {
-        res.json(err);
-    });
+    const userInput = req.body;
+    user.create(userInput, (err, found) => err ? console.log(err) : (res.json(found))
 });
+app.put("/update-user/:id", function (req,res){
+    //update user based on quiz answers
+    const userInput = req.body;
+    console.log(req.body);
+    //how do we know the id? 
+    user.update({"_id": id}, userInput), (err, found) => err ? console.log(err) : res.json(found))
+})
 
 app.listen(PORT, function() {
     console.log("App running on port " + PORT);
