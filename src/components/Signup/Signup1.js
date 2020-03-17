@@ -5,6 +5,7 @@ import SubmitButton from "../Form/Buttons/SubmitButton";
 import Wrapper from "../Wrapper/Wrapper"
 import Title from "../Title/Title"
 import "./Signup.css";
+import axios from "axios";
 
 // First page of signing up - basic username, email, password combo
 
@@ -29,7 +30,17 @@ export default class Signup1 extends Component {
       handleSubmit = event =>  {
         event.preventDefault();
         alert(`Data was submitted ${this.state.email}`)
-        //push to database  
+        //push to database 
+        axios.post('/create-user', {
+          email: this.state.email,
+          password: this.state.password
+        })
+        .then(function(response){
+          console.log(response)
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
         //go to next page
       }
     
