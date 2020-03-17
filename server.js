@@ -28,9 +28,11 @@ app.post("/create-user", function(req, res) {
     const userInput = req.body;
     user.create(userInput, (err, found) => err ? console.log(err) : (res.json(found))
 });
-app.put("/update-user", function (req,res){
+app.put("/update-user/:id", function (req,res){
     //update user based on quiz answers
-    const userInput = req.body
+    const userInput = req.body;
+    console.log(req.body);
+    user.update({"_id": id}, userInput), (err, found) => err ? console.log(err) : res.json(found))
 })
 
 app.listen(PORT, function() {
