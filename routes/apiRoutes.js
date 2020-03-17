@@ -3,3 +3,4 @@ const router = express.Router()
 const UserCtlr = require('../controllers/usersControllers')
 
 router.post('/create-user', UserCtlr.createUser);
+router.post('/quiz-questions', UserCtlr.updateUser);
