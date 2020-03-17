@@ -32,6 +32,7 @@ app.put("/update-user/:id", function (req,res){
     //update user based on quiz answers
     const userInput = req.body;
     console.log(req.body);
+    //how do we know the id? 
     user.update({"_id": id}, userInput), (err, found) => err ? console.log(err) : res.json(found))
 })
 
