@@ -1,6 +1,7 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var mongoDB = "mongodb+srv://jeremygill:password123@factivismcluster-2ye5e.gcp.mongodb.net/membersdb?retryWrites=true&w=majority";
 
 var PORT = 3001;
 
@@ -20,7 +21,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to mongo
-mongoose.connect("mongodb://localhost/membersdb", { useNewUrlParser: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true });
+var db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "MongoDB connection error"));
 
 // Route for adding new member
 app.post("/create-user", function(req, res) {
@@ -39,3 +43,5 @@ app.put("/update-user/:id", function (req,res){
 app.listen(PORT, function() {
     console.log("App running on port " + PORT);
 });
+
+// mongodb+srv://jeremygill:password123@factivismcluster-2ye5e.gcp.mongodb.net/membersdb?retryWrites=true&w=majority
