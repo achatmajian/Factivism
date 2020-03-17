@@ -8,7 +8,9 @@ import Title from "../Title/Title"
 
 // Page for logging in with their username and password
 
+
 export default class Login extends Component {
+    
     render() {
         return(
         <Wrapper>
@@ -17,7 +19,7 @@ export default class Login extends Component {
                 <h3>Log In</h3>
                 <Email />
                 <Password />
-                <LoginButton />
+                <LoginButton/>
             </div>
         </Wrapper>
         )
