@@ -41,11 +41,14 @@ export default class Signup2 extends Component {
       }
     
       handleSubmit = (props,event) =>  {
+        const baseURL = 'http://localhost:3001/'
         event.preventDefault();
         alert(`Data was submitted ${this.state.name}`);
-        //console.log("Data was submitted");
+
+        //add disableclass for button
+
         //push to database
-        axios.post('/create-user', {
+        axios.post (baseURL + 'create-user', {
           email: this.state.email,
           password: this.state.password, 
           name: this.state.name,
