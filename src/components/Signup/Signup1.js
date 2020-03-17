@@ -32,6 +32,7 @@ export default class Signup1 extends Component {
         console.log("current values email", this.state.email);
         console.log("current values pass", this.state.password);
       }
+
     
     render() {
         //let pageData = this.props.pageData;
