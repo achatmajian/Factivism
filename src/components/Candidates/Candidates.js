@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Candidates.css";
+import pageData from "../../pageData";
 
 // Page to render information about each candidate
 

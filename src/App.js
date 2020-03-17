@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Candidates from "./components/Candidates/Candidates";
 import ElectionHome from "./components/ElectionHome/ElectionHome";
@@ -12,28 +13,20 @@ import pageData from "./pageData";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Candidates pageData={pageData}/>
-        <ElectionHome pageData={pageData}/>
-        <Quiz pageData={pageData}/>
-        <Login pageData={pageData}/>
-        <Mainpage pageData={pageData}/>
-        <Signup1 pageData={pageData}/> 
-        <Signup2 pageData={pageData}/>
-      </div>
-
-/*     <Router>
-    <div className="App">
-      <Switch>
-        <Route exact path="/" component={Books} />
-        <Route exact path="/books" component={Books} />
-        <Route exact path="/books/:id" component={Detail} />
-        <Route component={NoMatch} />
-      </Switch>
-    </div>
-  </Router> */
-    )
-  }
-}
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" render={() => <Mainpage pageData={pageData}/>}/>
+            <Route exact path="/candidates" render={() => <Candidates pageData={pageData}/>}/>
+            <Route exact path="/electionhome" render={() => <ElectionHome pageData={pageData}/>}/>
+            <Route exact path="/quiz" render={() => <Quiz pageData={pageData}/>}/>
+            <Route exact path="/login" render={() => <Login pageData={pageData}/>}/>
+            <Route exact path="/signup1" render={() => <Signup1 pageData={pageData}/>}/>
+            <Route exact path="/signup2" render={() => <Signup2 pageData={pageData}/>}/>
+          </Switch>
+          </div>
+      </Router>
+      
+    )}};
 
 export default App;
