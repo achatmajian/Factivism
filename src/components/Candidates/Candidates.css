@@ -1,0 +1,29 @@
+body{
+    width: 375px;
+    border: 1px solid black;
+    height: auto;
+    margin: 20px;
+  }
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    background-color:white;
+    padding: 50px;
+    background-color: lightblue;
+}
+
+#bernie-sanders{
+    margin-top: 600px;
+    text-align: center;
+}
+
+.position-name{
+    font-weight: bold;
+}
+
+#positions-banner{
+    text-align: center;
+}
