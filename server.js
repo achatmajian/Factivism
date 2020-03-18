@@ -28,16 +28,24 @@ db.on("error", console.error.bind(console, "MongoDB connection error"));
 
 // Route for adding new member
 app.post("/create-user", function(req, res) {
+    console.log(req.body);
     // Create new user using req.body
     const userInput = req.body;
-    user.create(userInput, (err, found) => err ? console.log(err) : (res.json(found))
+    user.create(userInput, (err, found) => err ? console.log(err) : res.json(found))
 });
-app.put("/update-user/:id", function (req,res){
-    //update user based on quiz answers
+
+app.put("/update-user/:id", function (req, res) {
+    // update user based on quiz answers
     const userInput = req.body;
     console.log(req.body);
-    //how do we know the id? 
-    user.update({"_id": id}, userInput), (err, found) => err ? console.log(err) : res.json(found))
+    // how do we know the id?
+    user.update({"_id": req.params.id}, userInput, (err, found) => err ? console.log(err) : res.json(found))
+});
+
+app.get("/api/login", function(req, res) {
+    const usernameLogin = req.body;
+    console.log(req.body);
+    user.findOne({ "username": req.params.id }, )
 })
 
 app.listen(PORT, function() {
