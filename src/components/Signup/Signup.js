@@ -11,6 +11,7 @@ import Wrapper from "../Wrapper/Wrapper"
 import Title from "../Title/Title"
 import axios from "axios";
 import "./Signup.css";
+import { Link } from "react-router-dom";
 
 // Page for fleshing out the rest of the user profile, with address and contact info for figuring out polling places and election dates
 export default class Signup2 extends Component {
@@ -41,7 +42,7 @@ export default class Signup2 extends Component {
       }
     
       handleSubmit = (props,event) =>  {
-        const baseURL = 'http://localhost:3001/'
+        const baseURL = 'mongodb+srv://jeremygill:password123@factivismcluster-2ye5e.gcp.mongodb.net/membersdb?retryWrites=true&w=majority'
         event.preventDefault();
         alert(`Data was submitted ${this.state.name}`);
 
@@ -80,7 +81,7 @@ export default class Signup2 extends Component {
                     <City value={this.state.city} onChange={this.handleChange} />
                     <State value={this.state.state} onChange={this.handleChange} />
                     <Zip value={this.state.zip} onChange={this.handleChange} />
-                    <SignUpButton onSubmit={this.handleSubmit} />
+                    <SignUpButton to={"/electionhome"} onSubmit={this.handleSubmit}/>
                 </div>
             </Wrapper>
         )    
