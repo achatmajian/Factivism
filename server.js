@@ -39,7 +39,7 @@ app.put("/update-user/:id", function (req, res) {
     const userInput = req.body;
     console.log(req.body);
     // how do we know the id?
-    user.update({"_id": id}, userInput, (err, found) => err ? console.log(err) : res.json(found))
+    user.update({"_id": req.params.id}, userInput, (err, found) => err ? console.log(err) : res.json(found))
 });
 
 app.listen(PORT, function() {
