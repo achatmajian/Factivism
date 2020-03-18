@@ -18,7 +18,7 @@ export default class Login extends Component {
                 <h3>Log In</h3>
                 <Email />
                 <Password />
-                <Link to="/electionhome" type="button" className="button">Submit</Link>
+                <button type="submitbutton" className="button"><Link to="/electionhome">Submit</Link></button>
             </div>
         </Wrapper>
         )
