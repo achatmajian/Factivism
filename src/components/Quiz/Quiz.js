@@ -12,11 +12,16 @@ export default class Quiz extends Component {
             console.log(issuesarray[i]);
             return (
             <div className="row">
-                <div className="twelve columns collapsed">
+                <div className="twelve columns collapsed content-container">
+                    <div id="issue-name">
                     {issuesarray[i].name}
+                    </div>
                     <img src={issuesarray[i].icon} className="img-icon" alt="icon"/>
                     <div id="questions-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                        <div id="quiz-question">
                         {issuesarray[i].question}
+                        </div>
+                        <br></br>
                     </div>
                     <div id="answers-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
                         <div>
