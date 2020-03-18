@@ -19,7 +19,7 @@ class Mainpage extends Component {
 
                 <br></br>
                 <div className="button-container">
-                <Linkz to={`/login`} type="button" className="button">Log In</Link> {/* This button takes the user to the login "page" */}
+                <Link to={`/login`} type="button" className="button">Log In</Link> {/* This button takes the user to the login "page" */}
                 <Link to={"/signup"} type="button" className="button">Sign Up</Link> {/* This button takes the user to the sign up 1 "page" */}
                 </div>
             </section>
