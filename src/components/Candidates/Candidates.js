@@ -11,8 +11,9 @@ export default class Candidates extends Component {
         console.log(pageData);
         return (
             <section id="candidates">
+                <div className="content-container">
                 <div className="row">
-                    <div className="twelve columns collapsed">
+                    <div className="twelve columns collapsed" id="bernie-sanders">
                         <h1>{pageData.name}</h1>
                         <img src={pageData.img_url} className="candidate-img" alt="candidate"/>                        
                     </div>
@@ -24,13 +25,14 @@ export default class Candidates extends Component {
                             return(
                                 <div className="row political-positions-row">
                                     <ul style={{ listStyleType: "none" }} key={i}>
-                                        <li>{item.position_name}?</li>
+                                        <li className="position-name">{item.position_name}?</li>
                                         <li>{item.position_stance}</li>
                                     </ul>
                                 </div>
                             )
                         })}
                     </div>
+                </div>
                 </div>
             </section>
         )
