@@ -17,7 +17,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => <Mainpage pageData={pageData}/>}/>
             <Route exact path="/candidates" render={() => <Candidates pageData={pageData}/>}/>
-            <Route exact path="/electionhome" render={() => <ElectionHome pageData={pageData}/>}/>
+            <Route exact path="/electionhome/:id" render={() => <ElectionHome pageData={pageData}/>}/>
             <Route exact path="/quiz" render={() => <Quiz pageData={pageData}/>}/>
             <Route exact path="/login" render={() => <Login pageData={pageData}/>}/>
             <Route exact path="/signup" render={() => <Signup pageData={pageData}/>}/>
