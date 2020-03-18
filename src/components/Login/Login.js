@@ -12,12 +12,25 @@ export default class Login extends Component {
     render() {
         return(
         <Wrapper>
-            <Title />
+            <div className="content-container">
+            <div className="logo-container">
+                <div className="logo">
+                <h2 className="title">Factivism</h2>
+                </div>
+                <p className="subtitle">Factivism is an application dedicating to helping people become more informed and civically active! Join today to get information on issues, candidates, and more. Get politically involved with Factivism.</p>
+                </div>
+
+                <br></br>
             <div className="Form-Container">
                 <h3>Log In</h3>
                 <Email />
                 <Password />
+                <div className="button-container">
+                <div className="button">
                 <LoginButton />
+                </div>
+                </div>
+            </div>
             </div>
         </Wrapper>
         )
